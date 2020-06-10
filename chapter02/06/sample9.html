@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>sample9</title>
+   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+        <script src="../../js/jquery-3.2.1.min.js"></script>
+        <script>
+            $(function () {
+                $("button#fade100").click(function () {
+                    $("img:not(:animated)").fadeTo("slow", 1);
+                });
+                $("button#fade50").click(function () {
+                    $("img:not(:animated)").fadeTo("slow", 0.5);
+                });
+                $("button#fade0").click(function () {
+                    $("img:not(:animated)").fadeTo("slow", 0);
+                });
+                $("button#fadeOut").click(function () {
+                    $("img:not(:animated)").fadeOut("slow");
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <button id="fade100">表示</button>
+        <button id="fade50">半透明</button>
+        <button id="fade0">非表示</button>
+        <button id="fadeOut">非表示(fadeOut)</button>
+        <p><img src="flower.jpg" alt="flower"></p>
+        <p>このp要素はimg要素のあとに記述されています。</p>
+    </body>
+</html>

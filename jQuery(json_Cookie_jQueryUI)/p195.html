@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="奈良県立高等技術専門校">
+    <title>p195 もう一つのデータ形式「JSON」</title>
+    <!--FireFoxで動作確認。Chromeは文字化けした 2018.01.22-->
+</head>
+<body>
+    <h2>お知らせ</h2>
+    <div id="news">
+        <p>ロード中です…（更新されない場合は<a href="./news.html">こちら</a>をご覧ください）</p>
+    </div>
+<!--<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>-->
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $.ajax({
+            url: 'news.json',
+            dataType: 'json',
+            async: true,
+            success: function(json) {
+                var html = '';
+                for (i in json) {
+                    html += '<li><a href="'
+                           + json[i].link
+                           + '">'
+                           + json[i].title
+                           + '</a></li>';
+                }
+                $('#news').html('<ul>' + html + '</ul>');
+            },
+            error: function() {
+                alert('データの読み込みに失敗しました。しばらくたってからアクセスし直してみてください。');
+            }
+        });
+    </script>
+</body>
+</html>

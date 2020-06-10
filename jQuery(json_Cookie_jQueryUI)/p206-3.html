@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="奈良県立高等技術専門校">
+        <title>p206-3 jQuery UI でサブメニューの動的な展開が可能なメニューを利用</title> 
+    <!--<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css">-->
+        <link rel="stylesheet" href="../jquery-ui-1.12.1/jquery-ui.css">
+        <style type="text/css">
+            ul#menu li a {
+                text-decoration: none;
+            }
+            .ui-menu { width: 200px; }
+        </style>
+    </head>
+    <body>
+        <ul id="menu">
+            <li><a href="top.html">トップページ</a></li>
+            <li><a href="stationery.html">文房具</a>
+                <!--サブメニューを入れ子で用意 -->
+                <ul>
+                    <li><a href="writing.html">筆記具</a>
+                        <ul>
+                            <li><a href="ballpoint.html">ボールペン</a>
+                                <ul>
+                                    <li><a href="black_pen.html">黒ボールペン</a></li>
+                                    <li><a href="red_pen.html">赤ボールペン</a></li>
+                                    <li><a href="blue_pen.html">青ボールペン</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="pencil.html">えんぴつ</a>
+                                <ul>
+                                    <li><a href="hb_pencil.html">HBえんぴつ</a></li>
+                                    <li><a href="b_pencil.html">Bえんぴつ</a></li>
+                                    <li><a href="2b_pencil.html">2Bえんぴつ</a></li>
+                                    <li><a href="red_pencil.html">赤えんぴつ</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="note.html">ノート</a>
+                        <ul>
+                            <li><a href="japanese.html">こくごノート</a></li>
+                            <li><a href="sarithmetic.html">さんすうノート</a></li>
+                            <li><a href="music.html">おんがくノート</a></li>
+                            <li><a href="free.html">じゆうちょう</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="money.html">おこづかい帳</a></li>
+                    <li><a href="office.html">事務用品</a>
+                        <ul>
+                            <li><a href="binder.html">バインダー</a></li>
+                            <li><a href="stapler.html">ホチキス</a></li>
+                            <li><a href="cutter.html">カッター</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="storage.html">収納用品</a>
+                <ul>
+                    <li><a href="box.html">ボックス</a></li>
+                    <li><a href="dust.html">ゴミ箱</a></li>
+                    <li><a href="books.html">本棚</a>
+                        <ul>
+                            <li><a href="pocket .html">文庫本用</a></li>
+                            <li><a href="magazine.html">雑誌用</a></li>
+                            <li><a href="comics.html">マンガ用</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">梱包</a>
+                <ul>
+                    <li><a href="gummed_tape.html">ガムテープ</a></li>
+                    <li><a href="string.html">ビニールひも</a></li>
+                    <li><a href="cardboard.html">段ボール</a></li>
+                </ul>
+            </li>
+            <li><a href="#">お問い合わせ</a>
+                <ul>
+                    <li><a href="tel.html">電話</a></li>
+                    <li><a href="fax.html">ファックス</a></li>
+                    <li><a href="mail.html">メール</a></li>
+                </ul>
+            </li>
+            <li><a href="map.html">アクセス地図</a></li>
+        </ul>
+    <!--<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>-->
+        <script src="../js/jquery-1.12.4.min.js"></script>
+        <script src="../jquery-ui-1.12.1/jquery-ui.min.js"></script>
+        <script type="text/javascript">
+            $('#menu').menu();
+        </script>
+    </body>
+</html>

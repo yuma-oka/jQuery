@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>sample2</title>
+   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+        <script src="../../js/jquery-3.2.1.min.js"></script>
+        <script>
+            $(function () {
+                $("a").click(function () {
+                    $("img").attr("src", "sea.jpg")
+                            .attr("alt", "海");
+                });
+            });
+        </script>
+    </head>
+    <body>
+
+        <a href="sea.jpg">画像を変更</a>
+
+        <p><img src="flower.jpg" alt="花"></p>
+
+    </body>
+</html>

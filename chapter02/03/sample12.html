@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>sample12</title>
+   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+        <script src="../../js/jquery-3.2.1.min.js"></script>
+        <script>
+            $(function () {
+                $("img").mousemove(function (e) {
+                    $("p").html("現在のX座標：" + e.clientX + 
+                         "<br>\n\現在のY座標：" + e.clientY);
+                    console.log(e);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <img src="flower.jpg" alt="花">
+        <p></p>
+    </body>
+</html>

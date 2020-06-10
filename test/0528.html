@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>サンプル</title>
+        <script src="../js/jquery-3.2.1.min.js"></script>
+        <style>
+            div{
+                width: 300px;
+                height: 300px;
+                background: red;
+                display: none;
+            }
+        </style>
+        <script>
+            $(function() {
+               $("button#show").click(function() {
+                   $("div").toggle("slow",function() {
+                       $(this).css("background","blue")
+                   });
+               })
+            });
+        </script>
+    </head>
+    <body>
+        <button id="show">表示</button>
+        <div></div>
+    </body>
+</html>

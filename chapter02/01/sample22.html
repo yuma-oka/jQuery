@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>sample22</title>
+   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+        <script src="../../js/jquery-3.2.1.min.js"></script>
+        <script>
+            $(function () {
+                $(":lang(ja)").css("color", "red");
+                $(":lang(en)").css("color", "blue");
+                $(":lang(en-us)").css("color", "green");
+            });
+        </script>
+    </head>
+    <body>
+        <ul>
+            <li lang="ja"> テキストテキストテキストテキストテキスト</li>
+            <li lang="en"> テキストテキストテキストテキストテキスト</li>
+            <li lang="en-es"> テキストテキストテキストテキストテキスト</li>
+            <li lang="en-us"> テキストテキストテキストテキストテキスト</li>
+        </ul>
+    </body>
+</html>

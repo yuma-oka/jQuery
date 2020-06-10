@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>sample35</title>
+   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+        <script src="../../js/jquery-3.2.1.min.js"></script>
+        <script>
+            $(function () {
+                $("li:parent").css("color", "red");
+                $("li:empty").css("color", "blue");
+            });
+        </script>
+    </head>
+    <body>
+        <ul>
+            <li>テキストテキストテキストテキストテキスト</li>
+            <li></li>
+            <li>テキストテキストテキストテキストテキスト</li>
+            <li></li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="奈良県立高等技術専門校">
+    <title>p206-4 jQuery UI でタブ・パネルを簡単に利用する</title> 
+<!--<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css">-->
+    <link rel="stylesheet" href="../jquery-ui-1.12.1/jquery-ui.css">
+</head>
+<body>
+    <!--タブ・パネル全体を定義-->
+    <div id="tabs">
+        <!--タブ・リストを定義-->
+        <ul>
+            <li><a href="#Verdi">ヴェルディ</a></li>
+            <li><a href="#Puccini">プッチーニ</a></li>
+            <li><a href="#Wagner">ワーグナー</a></li>
+        </ul>
+        <!--パネル本体を定義-->
+        <div id="Verdi">
+            <p>19世紀を代表するイタリアのロマン派音楽の作曲家であり、主にオペラを制作した。</p>
+            <p>代表作は『ナブッコ』、『リゴレット』、『椿姫』、『アイーダ』などがある。彼の作品は世界中のオペラハウスで演じられ、またジャンルを超えた展開を見せつつ大衆文化に広く根付いている。ヴェルディの活動はイタリア・オペラに変革をもたらし、現代に至る最も重要な人物と評される。</p>
+        </div>
+        <div id="Puccini">
+            <p>イタリアの作曲家。その作品である『トスカ』、『蝶々夫人』、『ラ・ボエーム』、『トゥーランドット』などのオペラは今日でも上演の機会が多いことで知られる。</p>
+        </div>
+        <div id="Wagner">
+            <p>ドイツ国民オペラの流れを引き継ぎ、更に革新、発展させ、『楽劇』を作り出した。音楽史上、ドイツオペラを世界的優位に立たせた人物。それまでのドイツオペラが、どれもセリフ入りでジングシュピールの要素を留めていたのに対して、ワーグナーは【リエンチ】以降、その要素を捨て、それまでの番号オペラの形式から脱し、新しく指導動機、シュプレヒゲザング、無限旋律などの手法を使い、台本の戯曲性強化をし、オペラ（歌劇）を『楽劇』にした。</p>
+        </div>
+    </div>
+<!--<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>-->
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+        $('#tabs').tabs({
+            heightStyle: 'content'
+        });
+    </script>
+</body>
+</html>

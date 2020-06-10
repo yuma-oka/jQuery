@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="奈良県立高等技術専門校">
+    <title>p132 slideToggle</title>
+</head>
+<body>
+    <p id="toolTitle">ファイル</p>
+    <div id="toolContent">
+        <ul>
+            <li>新規</li>
+            <li>上書き保存</li>
+            <li>名前を付けて保存</li>
+            <li>とじる</li>
+        </ul>
+    </div>
+<!--<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>-->
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="jquery.cookie.js"></script>
+    <script type="text/javascript">
+    $('#toolContent').css('display', $.cookie('menu')); //Cookie読み込み
+    $('#toolTitle').click(function () { //クリックしたら
+        $('#toolContent').slideToggle('', function() {
+            $.cookie('menu', $(this).css('display'), {expires:30});
+        });
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="奈良県立高等技術専門校">
+    <title>p206-5 jQuery UI で汎用的なダイアログ・ボックスを表示する</title> 
+<!--<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css">-->
+    <link rel="stylesheet" href="../jquery-ui-1.12.1/jquery-ui.css">
+</head>
+<body>
+    <div id="dialog" title="ジュゼッペ・ヴェルディ">
+        <p>19世紀を代表するイタリアのロマン派音楽の作曲家であり、主にオペラを制作した。</p>
+        <p>代表作は<a href="#">『ナブッコ』</a>、<a href="#">『リゴレット』</a>、<a href="#">『椿姫』</a>、<a href="#">『アイーダ』</a>などがある。彼の作品は世界中のオペラハウスで演じられ、またジャンルを超えた展開を見せつつ大衆文化に広く根付いている。ヴェルディの活動はイタリア・オペラに変革をもたらし、現代に至る最も重要な人物と評される。</p>
+    </div>
+<!--<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>-->
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+        $('#dialog').dialog({
+            modal: true
+        });
+    </script>
+</body>
+</html>
